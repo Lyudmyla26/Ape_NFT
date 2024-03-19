@@ -8,7 +8,7 @@ export const Map = () => {
         { key: 1, text: "All owners of APE NFTs and all future collections will receive a percentage of sales based on the number of NFTs they own", title: "YAPE DROP" },
         { key: 2, text: "Launch of the 2nd YACHT Collection Releasing the first version of the Ape Slam Game", title: "New Collection" },
         { key: 3, text: "Launch your own token, the proceeds of which will go to a global fund to LAUNCH YACHT CLUB AND PROMOTE it", title: "Token" },
-        { key: 4, text: <a href="https://learnenglishteens.britishcouncil.org/skills/reading/a2-reading/mind-maps" target="_blank" ><ArrowSvg className='icon-map'/></a>, title: "Learn more in mind map" } // Додавання пустого тексту для останнього слайда
+        { key: 4, text: <a rel="noreferrer" href="https://learnenglishteens.britishcouncil.org/skills/reading/a2-reading/mind-maps" target="_blank" ><ArrowSvg className='icon-map'/></a>, title: "Learn more in mind map" } // Додавання пустого тексту для останнього слайда
     ];
 
     const nextSlide = () => {
