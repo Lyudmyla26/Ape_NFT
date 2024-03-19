@@ -1,4 +1,9 @@
-@import-normalize; /* bring in normalize.css styles */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../fonts/MyCustomFont.woff2') format('woff2'),
+       url('../fonts/MyCustomFont.woff') format('woff');
+       
+}
 
 body {
   margin: 0;
@@ -7,9 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
