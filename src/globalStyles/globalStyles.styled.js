@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif; 
     font-weight: 500;
     letter-spacing: 0.02em;
-    color: ${(props) => props.theme.color.primary_text_black};
+    color: ${(props) => props.theme.color.primary_white};
     background-color: ${(props) => props.theme.color.primary_black};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

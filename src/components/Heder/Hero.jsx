@@ -1,21 +1,25 @@
 import React from 'react';
 import { Heros } from './Hero.styled';
-export const Hero = () =>{
-    return(
-    <Heros>
-    {/* <svg className="Icons"><use href="../../images/symbol-defs.svg#icon-Logo"></use></svg> */}
-       <ul className='List'>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       </ul>
-        <p className="Top"> diD yOu seE iT ?</p>
-        <h1 className="Title" >YACHT APES</h1>
-        <p className="Expression">Apes aRe eveRywhere</p>
-        <span className="Avatar" />
-        <h3 className="Name">MEET APES</h3>
-        <p className='Description'>Yacht Ape is a collection of unique digital apes that you can own in NFT format</p>
-    </Heros>
+import {ReactComponent as FrameSvg} from "../../images/Frame.svg";
+import {ReactComponent as DiscordSvg} from "../../images/discord.svg";
+import {ReactComponent as LogomarkSvg} from "../../images/Logomark-Blue.svg";
+import {ReactComponent as LogoSvg} from "../../images/logo.svg";
+export const Hero = () => {
+    return (
+        <Heros>
+            <FrameSvg className="header-logo" width={48} height={32}/>
+            <ul className='list'>
+                <li className='navigation'><button className='button-menu' type='button'>Menu</button></li>
+                <li className="navigation"><button className='button-menu' type='button'><DiscordSvg  width={16} height={16}/></button></li>
+                <li className="navigation"><button className='button-menu' type='button'><LogomarkSvg width={16} height={16}/></button></li>
+                <li className="navigation"><button className='button-menu' type='button'><LogoSvg  width={16} height={16}/></button></li>
+            </ul>
+            <p className="top"> diD yOu seE iT ?</p>
+            <h1 className="title">YACHT APES</h1>
+            <p className="expression">Apes aRe eveRywhere</p>
+            <span className="avatar" />
+            <h3 className="name">MEET APES</h3>
+            <p className='description'>Yacht Ape is a collection of unique digital apes that you can own in NFT format</p>
+        </Heros>
     );
-}
+};
