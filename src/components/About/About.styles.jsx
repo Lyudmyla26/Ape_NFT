@@ -74,5 +74,4 @@ export const Abouts = styled.div`
   .tape li> .close{
   margin: 0;
   }
-  
     `

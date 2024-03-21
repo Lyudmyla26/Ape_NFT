@@ -20,9 +20,9 @@ export const Heros = styled.div`
   left: 5px;
   }
   .list{
-  position: absolute;
-  top: 10px;
-  right: 5px;
+  position: fixed;
+  top: 55px;
+  right: 10px;
   }
   .list> li{
   border-radius: 8px;
@@ -90,6 +90,11 @@ export const Heros = styled.div`
   background: rgba(30, 30, 30, 0.1);
   font-size: 16px;
   line-height: 1.18;
+  border: none;
+  }
+  .name:hover,
+  /name:focus {
+    color: ${(props) => props.theme.color.primary_white}
   }
   .navigation{
   display: flex;
@@ -108,4 +113,5 @@ export const Heros = styled.div`
   border: none;
   cursor: pointer;
   }
+  
   `

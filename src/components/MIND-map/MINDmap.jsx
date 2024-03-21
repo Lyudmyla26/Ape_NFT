@@ -8,12 +8,12 @@ export const Map = () => {
         { key: 1, text: "All owners of APE NFTs and all future collections will receive a percentage of sales based on the number of NFTs they own", title: "YAPE DROP" },
         { key: 2, text: "Launch of the 2nd YACHT Collection Releasing the first version of the Ape Slam Game", title: "New Collection" },
         { key: 3, text: "Launch your own token, the proceeds of which will go to a global fund to LAUNCH YACHT CLUB AND PROMOTE it", title: "Token" },
-        { key: 4, text: <a rel="noreferrer" href="https://learnenglishteens.britishcouncil.org/skills/reading/a2-reading/mind-maps" target="_blank" ><ArrowSvg className='icon-map'/></a>, title: "Learn more in mind map" } // Додавання пустого тексту для останнього слайда
+        { key: 4, text: <a rel="noreferrer" href="https://learnenglishteens.britishcouncil.org/skills/reading/a2-reading/mind-maps" target="_blank" ><ArrowSvg className='icon-map'/></a>, title: "Learn more in mind map" } 
     ];
 
     const nextSlide = () => {
         if (activeSlide === slides.length - 1) {
-            return; // Нічого не робимо, якщо вже на останньому слайді
+            return; 
         } else {
             setActiveSlide(prevIndex => prevIndex + 1);
         }
@@ -21,7 +21,7 @@ export const Map = () => {
 
     const prevSlide = () => {
         if (activeSlide === 0) {
-            return; // Нічого не робимо, якщо вже на першому слайді
+            return;
         } else {
             setActiveSlide(prevIndex => prevIndex - 1);
         }
