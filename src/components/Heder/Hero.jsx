@@ -46,9 +46,9 @@ export const Hero = ({scrollToMap, scrollToSection}) => {
            
             <ul className="list">
     <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><button type='button' onClick={handleMenuClick} className={`menu modal ${isModalOpen ? 'white' : ''}`} >{isModalOpen ? 'Close' : 'Menu'}</button></li>
-    <li  className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="https://lyudmyla26.github.io/Resume-html-css/" target='_blank' className={`menu ${isModalOpen ? 'white' : ''}`}  ><DiscordSvg className='discord-svg' width={16} height={16}/></a></li>
-    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="https://lyudmyla26.github.io/Resume-html-css/" target='_blank' className={`menu ${isModalOpen ? 'white' : ''}`} ><LogomarkSvg className='discord-svg' width={16} height={16}/></a></li>
-    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="https://lyudmyla26.github.io/Resume-html-css/" target='_blank' className={`menu ${isModalOpen ? 'white' : ''}`} ><LogoSvg className='discord-svg' width={16} height={16}/></a></li>
+    <li  className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="https://lyudmyla26.github.io/Resume-html-css/" target='_blank' rel="noreferrer" className={`menu ${isModalOpen ? 'white' : ''}`}  ><DiscordSvg className='discord-svg' width={16} height={16}/></a></li>
+    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="https://lyudmyla26.github.io/Resume-html-css/" target='_blank' rel="noreferrer" className={`menu ${isModalOpen ? 'white' : ''}`} ><LogomarkSvg className='discord-svg' width={16} height={16}/></a></li>
+    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="https://lyudmyla26.github.io/Resume-html-css/" target='_blank' rel="noreferrer" className={`menu ${isModalOpen ? 'white' : ''}`} ><LogoSvg className='discord-svg' width={16} height={16}/></a></li>
                 </ul>
                 <div className='info'>
             <p className="top"> diD yOu seE iT ?</p>
