@@ -25,13 +25,13 @@ export const Hero = ({scrollToMap, scrollToSection}) => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    useEffect(() => {
-        if (isModalOpen) {
-            document.documentElement.classList.add('overflow-hidden');
-        } else {
-            document.documentElement.classList.remove('overflow-hidden');
-        }
-    }, [isModalOpen]);
+  useEffect(() => {
+    if (isModalOpen) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}, [isModalOpen]);
     const handleMenuClick = (e) => {
         e.preventDefault();
         setIsModalOpen(!isModalOpen);

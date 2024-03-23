@@ -15,6 +15,12 @@ display: flex;
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    visibility: visible;
+    pointer-events: all;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
     
 .item-button{
   font-family: 'Messina Sans Mono', sans-serif; 
