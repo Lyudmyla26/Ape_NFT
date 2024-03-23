@@ -13,5 +13,9 @@ font-family: 'Messina Sans Mono', sans-serif;
 font-size: 12px;
 font-weight: 400;
 line-height: 1.16;
-color: ${(props) => props.theme.color.primary_white}
+color: ${(props) => props.theme.color.primary_white};
+margin-bottom: 25px;
+ @media only screen and (min-width: 768px) {
+    width: 592px;
+  } 
 }`

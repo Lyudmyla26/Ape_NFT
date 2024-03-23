@@ -4,13 +4,20 @@ import '../../font/MessinaSans/stylesheet.css';
 export const Forms = styled.div`
 width: 216px;
 margin: 0 auto;
-
+@media only screen and (min-width: 768px) {
+width: 397px;
+  } 
 .title{
 font-size: 44px;
 font-weight: 900;
 line-height: 0,91;   
 text-transform: uppercase;
 text-align: center;
+@media only screen and (min-width: 768px) {
+   font-size: 60px;
+   line-height: 1;  
+
+  } 
 }
 
 .close{    
@@ -46,7 +53,7 @@ font-size: 12px;
 font-weight: 400;
 line-height: 1.17;   
 text-transform: uppercase;
-width: 175px;
+width: 100%; 
 
 &.valid-input:not(:placeholder-shown) {
       border: 2px solid ${(props) => props.theme.color.primary_white}; 
@@ -60,6 +67,13 @@ width: 175px;
 
 .icon{
 margin: 12px 8px;
+}
+form{
+  @media only screen and (min-width: 768px) {
+width: 248px;
+display: block;
+    margin: 15px auto;
+  }
 }
 .button-form{
 backdrop-filter: blur(12px);
@@ -76,7 +90,7 @@ color: inherit;
 margin: 15px 0 0;
 transition-property: color;
 transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-form:hover,
 .button-form:focus {
