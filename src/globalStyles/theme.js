@@ -4,11 +4,7 @@ export const theme = {
         primary_black: '#181818',
         primary_pink: '#dc3b5a',
         primary_white: '#fff',
-        // primary_lite_green: '#45FFBC',
-        // primary_grey: '#B6B6B6',
-        // primary_green_lite: '#E3FFA8',
-        // secondary_color_grey_1: '#292928',
-        // secondary_color_pink: '#FFC4F7',
-        // secondary_color_yellow: '#FFF3B7',
+        primary_red: '#ff0000',
+        primary_grey: "rgba(30, 30, 30, 0.1)",
     }
 };

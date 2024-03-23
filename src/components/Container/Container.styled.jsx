@@ -6,6 +6,7 @@ export const ContainersStyle = styled.div`
   outline: 2px solid red;
   outline-offset: -2px; 
   
+  
 
   @media screen and (min-width: 480px) {
     max-width: 480px;

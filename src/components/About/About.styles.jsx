@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import about from '../../images/About1x.png'
+import about_2x from '../../images/About2x.png'
 import '../../font/BiroScript/stylesheet.css';
 import '../../font/MessinaSans/stylesheet.css';
 
@@ -49,6 +50,14 @@ export const Abouts = styled.div`
   width: 216px;
   height: 292px;
   }
+    @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+    .abouts-avatar {
+      background-image: url(${about_2x});
+      background-size: 216px 292px;
+    }
+}
   .tape-container{
    padding: 6px 0px 6px 0px;
    background-color: ${props => props.theme.color.primary_pink};

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import { FAQs } from "./FAQ.styles";
 
-export const Question = () => {
+export const Question = ({qw}) => {
     const [activeQuestion, setActiveQuestion] = useState(0); 
 
     const question = [
@@ -19,7 +19,7 @@ export const Question = () => {
     
     
     return (
-        <FAQs>
+        <FAQs id={qw}>
             <h2 className='title'>FAQ</h2>
             <ul className='list-questions'>
             {question.map((questions, index) => (

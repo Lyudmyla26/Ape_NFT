@@ -1,26 +1,63 @@
-import React from 'react';
+// Hero.jsx
+import React, { useEffect, useState } from 'react';
 import { Heros } from './Hero.styled';
 import {ReactComponent as FrameSvg} from "../../images/Frame.svg";
 import {ReactComponent as DiscordSvg} from "../../images/discord.svg";
 import {ReactComponent as LogomarkSvg} from "../../images/Logomark-Blue.svg";
 import {ReactComponent as LogoSvg} from "../../images/logo.svg";
-export const Hero = () => {
+import { Menu } from 'components/Menu/Menu';
+
+
+
+export const Hero = ({scrollToMap, scrollToSection}) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isListFixed, setIsListFixed] = useState(false);
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            const heroSection = document.querySelector('.df');
+            const isFixed = window.scrollY > heroSection.offsetHeight;
+            setIsListFixed(isFixed);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    useEffect(() => {
+        if (isModalOpen) {
+            document.documentElement.classList.add('overflow-hidden');
+        } else {
+            document.documentElement.classList.remove('overflow-hidden');
+        }
+    }, [isModalOpen]);
+    const handleMenuClick = (e) => {
+        e.preventDefault();
+        setIsModalOpen(!isModalOpen);
+    };
+
+ 
+
     return (
         <Heros>
-            <a href='../App.jsx'><FrameSvg className="header-logo" width={48} height={32}/></a>
+            <div className='df'>
+            <a href='../App.jsx'><FrameSvg className={`header-logo ${isModalOpen ? 'white' : ''}`} width={48} height={32}/></a>
            
-            <ul className='list'>
-                <li className='navigation'><button className='button-menu' type='button'>Menu</button></li>
-                <li className="navigation"><button className='button-menu' type='button'><DiscordSvg  width={16} height={16}/></button></li>
-                <li className="navigation"><button className='button-menu' type='button'><LogomarkSvg width={16} height={16}/></button></li>
-                <li className="navigation"><button className='button-menu' type='button'><LogoSvg  width={16} height={16}/></button></li>
-            </ul>
+            <ul className="list">
+    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><button type='button' onClick={handleMenuClick} className={`menu modal ${isModalOpen ? 'white' : ''}`} >{isModalOpen ? 'Close' : 'Menu'}</button></li>
+    <li  className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="../App.jsx" className={`menu ${isModalOpen ? 'white' : ''}`}  ><DiscordSvg className='discord-svg' width={16} height={16}/></a></li>
+    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="../App.jsx" className={`menu ${isModalOpen ? 'white' : ''}`} ><LogomarkSvg className='discord-svg' width={16} height={16}/></a></li>
+    <li className={`navigation ${isListFixed ? 'fixed' : ''}`}><a href="../App.jsx" className={`menu ${isModalOpen ? 'white' : ''}`} ><LogoSvg className='discord-svg' width={16} height={16}/></a></li>
+</ul>
             <p className="top"> diD yOu seE iT ?</p>
             <h1 className="title">YACHT APES</h1>
             <p className="expression">Apes aRe eveRywhere</p>
             <span className="avatar" />
-            <button className="name">MEET APES</button>
+            <button className="name" type='button' onClick={scrollToMap}>MEET APES</button>
             <p className='description'>Yacht Ape is a collection of unique digital apes that you can own in NFT format</p>
+                {isModalOpen && <Menu setIsModalOpen={setIsModalOpen} scrollToSection={scrollToSection} />}
+            </div>
         </Heros>
     );
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Abouts } from './About.styles';
 import {ReactComponent as CloseSvg} from "../../images/add-sharp.svg";
 
-export const About = () => {
+export const About = ({ab}) => {
     useEffect(() => {
         const tape = document.querySelector('.tape');
         const cloneItems = tape.innerHTML;
@@ -22,7 +22,7 @@ export const About = () => {
     }, []);
     
     return (
-        <Abouts>
+        <Abouts id={ab}>
         <div className='thumb-about'>
         <h2 className='title-about'>a Story that started with <span className='title-abouts'> one simple ape</span> </h2>
         <p className='note1'>WHO GOT <br/>FED UP WITH BORING AND HYPOCRITIC COMMONPLACE THIS IS HOW THE IDEA OF ESCAPING AND DYNAMIC JOURNEY ON THE YACHT</p>

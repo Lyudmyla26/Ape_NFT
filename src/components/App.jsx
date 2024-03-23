@@ -8,16 +8,26 @@ import { Footer } from "Footer/Footer";
 import { Question } from "./FAQ/FAQ";
 import { Collection } from "./Collection/Collection";
 import { Form } from "./Form/Form";
+
 export const App = () => {
+       const scrollToMap = () => {
+         const mapElement = document.getElementById("map");
+        mapElement.scrollIntoView(); 
+    };
+
+   const scrollToSection = (name) => {
+         const mapElement = document.getElementById(name);
+        mapElement.scrollIntoView(); 
+    };
   return (
     <Container>
-      <Hero/>
-      <About/>
-      <Map />
-      <Question />
-      <Collection />
-      <Form/>
-      <Footer/>
+      <Hero scrollToMap={scrollToMap} scrollToSection={scrollToSection} />
+      <About ab={"about"}/>
+      <Map  mind={'map'} />
+      <Question qw={"faq" }/>
+      <Collection art={"arts"} />
+      <Form mint={"mint"}/>
+      <Footer />
     </Container>
   );
 };

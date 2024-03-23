@@ -19,18 +19,29 @@ margin: 0 auto;
 display: flex;
 gap: 15px;
 margin-bottom: 10px;
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 .questions{
 font-size: 20px;
 font-weight: 900;
 line-height: 1;   
 text-transform: uppercase;
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
-.questions-thumb:hover,
-.questions-thumb:focus,
-.questions-thumb:active .questions
+.questions:hover,
+.questions:focus,
+.questions:active .questions
 {
-    color:${props => props.theme.color.primary_pink};
+color:${props => props.theme.color.primary_pink};
+}
+.questions-thumb:hover .questions-number,
+.questions-thumb:focus .questions-number,
+.questions-thumb:active .questions-number {
+color: ${props => props.theme.color.primary_white};
 }
 
 .questions-number{

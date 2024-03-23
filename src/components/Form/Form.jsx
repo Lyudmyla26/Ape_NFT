@@ -3,7 +3,7 @@ import {ReactComponent as CloseSvg} from "../../images/add-sharp.svg";
 import { ReactComponent as DiscordSvg } from "../../images/discord5.svg";
 import {ReactComponent as KittenSvg} from "../../images/SVG_MetaMask_Icon_Color 1.svg";
 import { Forms } from './Form.styled';
-export const Form = () => {
+export const Form = ({mint}) => {
     const [errors, setErrors] = useState({
         name: '',
         email: '',
@@ -13,6 +13,7 @@ export const Form = () => {
         email: '',
        });
     const [isSubmitting, setIsSubmitting] = useState(false); 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -55,23 +56,31 @@ export const Form = () => {
     };
 
     return (
-        <Forms onSubmit={handleSubmit}>
+        <Forms onSubmit={handleSubmit} id={mint}>
             <h2 className='title'>Are you in?</h2>
             <CloseSvg className="close" width={36} height={36} />
             <p className='description'>Join the YACHT APE community to be one of the first to receive our limited edition NFT</p>
             <form>
             <label className="form-label">
       <DiscordSvg className="icon" width={24} height={24} />
-                    <input type="text" name="name" required value={formData.name} 
+                    <input type="text" name="name" required value={formData.name} className={errors.name ? 'invalid-input' : 'valid-input'}
                     onChange={handleChange}  placeholder="@username"/>
                 </label>
                 {errors.name && <span className="error">{errors.name}</span>}
     <label className="form-label">
      <KittenSvg className="icon" width={24} height={24} />
-      <input type="text" name="email" required className={errors.email ? 'active' : ''}  placeholder="Wallet address" value={formData.email} onChange={handleChange}/>
+                    <input
+        type="text"
+        name="email"
+        required
+        className={errors.email ? 'invalid-input' : 'valid-input'}
+        placeholder="Wallet address"
+        value={formData.email}
+        onChange={handleChange}
+    />
                 </label>
                  {errors.email && <span className="error">{errors.email}</span>}
-                <button type='submit' className='button-form'> {isSubmitting ? 'MINTED' : 'MINT'}</button>
+                <button type='submit' className='button-form'> {isSubmitting ? 'MINTED' : errors.name || errors.email ? 'ERROR' : 'MINT'}</button>
             </form>  
         </Forms>
     );

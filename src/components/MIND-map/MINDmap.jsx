@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {ReactComponent as ArrowSvg} from "../../images/up-left-arrow.svg";
 import { Mindmep } from './MINDmap.styled';
 
-export const Map = () => {
+export const Map = ({mind}) => {
     const [activeSlide, setActiveSlide] = useState(0); 
+    const mapRef = useRef(null); 
+    
     const slides = [
         { key: 1, text: "All owners of APE NFTs and all future collections will receive a percentage of sales based on the number of NFTs they own", title: "YAPE DROP" },
         { key: 2, text: "Launch of the 2nd YACHT Collection Releasing the first version of the Ape Slam Game", title: "New Collection" },
@@ -28,8 +30,8 @@ export const Map = () => {
     };
     
     return (
-        <Mindmep>
-            <h2 className='title'>MIND map</h2>
+        <Mindmep id={mind} ref={mapRef} >
+            <h2 className='title' >MIND map</h2>
             <ul className='list-map'>
             {slides.map((slide, index) => (
                     <li key={slide.key} className={index === activeSlide ? 'active' : ''}>
