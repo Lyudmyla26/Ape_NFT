@@ -10,11 +10,12 @@ export const Heros = styled.div`
   margin-top: 50px;
   background-color: ${props => props.theme.color.primary_pink};
   border-radius: 12px; 
-  position: relative;
+
 .df{
 display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
   .header-logo{
   position: absolute;
