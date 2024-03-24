@@ -3,7 +3,7 @@
 
 
 <h3>
-   <strong>:sparkles: Developer: Ivan Sheremeta</strong>
+   <strong>:sparkles: Developer: Lyudmila Paladiіchuk</strong>
 </h3>
 
 <h2 style="margin-top:80px">Tools and Technologies Used</h2>
