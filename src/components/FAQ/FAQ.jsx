@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FAQs } from "./FAQ.styles";
+import { Section } from 'Section/Section';
 
 export const Question = ({qw}) => {
     const [activeQuestion, setActiveQuestion] = useState(0); 
@@ -16,6 +17,7 @@ export const Question = ({qw}) => {
     };
 
     return (
+        <Section>
         <FAQs id={qw}>
             <h2 className='title'>FAQ</h2>
             <ul className='list-questions'>
@@ -32,6 +34,7 @@ export const Question = ({qw}) => {
                     </li>
                 ))}
             </ul>
-        </FAQs>
+            </FAQs>
+        </Section>
     );
 };

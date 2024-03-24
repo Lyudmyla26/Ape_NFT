@@ -18,7 +18,7 @@ export const Heros = styled.div`
     margin: 50px auto;
   } 
   @media only screen and (min-width: 1280px) {
-  max-width: 1248px;
+  max-width: 1440px;
   padding: 0 10px;
   } 
 .df{

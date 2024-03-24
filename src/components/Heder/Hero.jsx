@@ -6,6 +6,7 @@ import {ReactComponent as DiscordSvg} from "../../images/discord.svg";
 import {ReactComponent as LogomarkSvg} from "../../images/Logomark-Blue.svg";
 import {ReactComponent as LogoSvg} from "../../images/logo.svg";
 import { Menu } from 'components/Menu/Menu';
+import { Section } from 'Section/Section';
 
 
 
@@ -40,6 +41,8 @@ export const Hero = ({scrollToMap, scrollToSection}) => {
  
 
     return (
+    
+        <Section>
         <Heros>
             <div className='df'>
             <a href='../App.jsx'><FrameSvg className={`header-logo ${isModalOpen ? 'white' : ''}`} width={48} height={32}/></a>
@@ -60,6 +63,7 @@ export const Hero = ({scrollToMap, scrollToSection}) => {
                 {isModalOpen && <Menu setIsModalOpen={setIsModalOpen} scrollToSection={scrollToSection} />}
            </div>
                 </div>
-        </Heros>
+            </Heros>
+            </Section>
     );
 };

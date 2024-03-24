@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Collections } from './Collections.style';
+import { Section } from 'Section/Section';
 
 export const Collection = ({ art }) => {
     const [activeSlide, setActiveSlide] = useState(0);
     const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
-console.log(isTablet)
+
     useEffect(() => {
         const handleResize = () => {
             setIsTablet(window.innerWidth >= 768);
@@ -44,6 +45,7 @@ console.log(isTablet)
     };
 
     return (
+        <Section>
         <Collections id={art}>
             <h2 className='title'>COLLECTION</h2>
             <ul className='list-map'>
@@ -58,5 +60,6 @@ console.log(isTablet)
                 <li><button type='button' className='button-map' onClick={nextSlide}>Next</button></li>
             </ul>
         </Collections>
+        </Section>
     );
 };

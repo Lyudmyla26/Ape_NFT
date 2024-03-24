@@ -3,13 +3,24 @@ import about from '../../images/About1x.png'
 import about_2x from '../../images/About2x.png'
 import '../../font/BiroScript/stylesheet.css';
 import '../../font/MessinaSans/stylesheet.css';
+import abouttablet from '../../images/abouttablet1x.png'
+import abouttablet2x from '../../images/abouttablet2x.png'
 
 export const Abouts = styled.div`
   margin-top: 50px;
 
   .thumb-about{
-  max-width: 216px;
+  width: 216px;
   margin: 0 auto ;
+  @media only screen and (min-width: 768px) {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+width: 592px;
+position: relative;
+
+}
+
   }
   .title-about{
   font-size: 40px;
@@ -17,6 +28,10 @@ export const Abouts = styled.div`
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 10px;
+  @media only screen and (min-width: 768px) {
+width: calc((100% - 30px) / 2);
+  font-size: 60px;
+}
   }
   .title-abouts{
   color: ${props => props.theme.color.primary_pink}; 
@@ -29,6 +44,10 @@ export const Abouts = styled.div`
   text-transform: uppercase; 
   text-align: right;
   margin-bottom: 20px;
+    @media only screen and (min-width: 768px) {
+width: calc((100% - 30px) / 2);
+text-align: right;
+}
   }
   .note2{
   font-family: 'Messina Sans Mono', sans-serif; 
@@ -38,6 +57,11 @@ export const Abouts = styled.div`
   text-transform: uppercase; 
   text-align: center;
   margin-bottom: 30px;
+    @media only screen and (min-width: 768px) {
+width: calc((100% - 30px) / 2);
+  font-size: 16px;
+   line-height: 1.19;
+}
   }
   .close{
   display: block;
@@ -49,6 +73,14 @@ export const Abouts = styled.div`
   background-repeat: no-repeat;
   width: 216px;
   height: 292px;
+    @media only screen and (min-width: 768px) {
+  background-image: url(${abouttablet});
+   width: 313px;
+  height: 422px;
+  position: absolute;
+    right: 0;
+    bottom: 0;
+}
   }
     @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -56,6 +88,11 @@ export const Abouts = styled.div`
     .abouts-avatar {
       background-image: url(${about_2x});
       background-size: 216px 292px;
+       @media only screen and (min-width: 768px) {
+    background-image: url(${abouttablet2x});
+    background-size: 313px 422px;
+
+}
     }
 }
   .tape-container{

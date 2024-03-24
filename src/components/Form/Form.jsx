@@ -3,6 +3,7 @@ import {ReactComponent as CloseSvg} from "../../images/add-sharp.svg";
 import { ReactComponent as DiscordSvg } from "../../images/discord5.svg";
 import {ReactComponent as KittenSvg} from "../../images/SVG_MetaMask_Icon_Color 1.svg";
 import { Forms } from './Form.styled';
+import { Section } from 'Section/Section';
 export const Form = ({mint}) => {
     const [errors, setErrors] = useState({
         name: '',
@@ -56,6 +57,7 @@ export const Form = ({mint}) => {
     };
 
     return (
+        <Section>
         <Forms onSubmit={handleSubmit} id={mint}>
             <h2 className='title'>Are you in?</h2>
             <CloseSvg className="close" width={36} height={36} />
@@ -82,6 +84,7 @@ export const Form = ({mint}) => {
                  {errors.email && <span className="error">{errors.email}</span>}
                 <button type='submit' className='button-form'> {isSubmitting ? 'MINTED' : errors.name || errors.email ? 'ERROR' : 'MINT'}</button>
             </form>  
-        </Forms>
+            </Forms>
+            </Section>
     );
 };

@@ -38,7 +38,7 @@ height: 256px;
 flex-direction: column;
 display: none; 
 @media only screen and (min-width: 768px) {
-width: 284px;
+width: calc((100% - 30px) / 2);
 height: 336px;
   }
 

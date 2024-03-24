@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import {ReactComponent as ArrowSvg} from "../../images/up-left-arrow.svg";
 import { Mindmep } from './MINDmap.styled';
+import { Section } from 'Section/Section';
 
 export const Map = ({mind}) => {
     const [activeSlide, setActiveSlide] = useState(0); 
@@ -30,6 +31,7 @@ export const Map = ({mind}) => {
     };
     
     return (
+        <Section>
         <Mindmep id={mind} ref={mapRef} >
             <h2 className='title' >MIND map</h2>
             <ul className='list-map'>
@@ -43,5 +45,6 @@ export const Map = ({mind}) => {
             <li><button type='button' className='button-map' onClick={prevSlide}>Prev</button></li>
             <li><button type='button' className='button-map' onClick={nextSlide} >Next</button></li></ul>
         </Mindmep>
+        </Section>
     );
 };

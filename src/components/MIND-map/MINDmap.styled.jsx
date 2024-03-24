@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import '../../font/BiroScript/stylesheet.css';
 import '../../font/MessinaSans/stylesheet.css';
 export const Mindmep = styled.div`
+@media only screen and (min-width: 768px) {
+width: 592px;
+margin: 0 auto;
+}  
+
 .title{
 font-size: 44px;
 font-weight: 900;
@@ -10,6 +15,9 @@ text-transform: uppercase;
 text-align: center;
 margin-top: 30px;
 margin-bottom: 10px;
+@media only screen and (min-width: 768px) {
+font-size: 60px;
+  }
 }
 .list-map{
 display: flex;
@@ -18,6 +26,9 @@ margin-bottom: 15px;
 list-style: none;
 overflow: hidden;
 justify-content: center;
+@media only screen and (min-width: 768px) {
+    flex-wrap: wrap;
+}
 }
 .list-map li{
 border-radius: 12px;
@@ -25,12 +36,19 @@ padding: 24px 12px;
 width: 216px;
 height: 242px;
 background-color: ${props => props.theme.color.primary_text_black};
-flex-direction: column;
 display: none;
+@media only screen and (min-width: 768px) {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: calc((100% - 30px) / 2);
+}
     
 }
 .list-map li.active {
-display: block;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 .list-map li:last-child{
 background-color: ${props => props.theme.color.primary_pink};
@@ -47,8 +65,6 @@ font-size: 32px;
 font-weight: 900;
 line-height: 1;   
 text-transform: uppercase;
-margin-top: 60px;
-    
 } 
 .icon-map{
 display: block;
@@ -59,6 +75,9 @@ display: flex;
 justify-content: center;
 gap:48px;
 list-style: none;
+@media only screen and (min-width: 768px) {
+display: none;
+}
 }
 .button-map{
 background-color: transparent;
