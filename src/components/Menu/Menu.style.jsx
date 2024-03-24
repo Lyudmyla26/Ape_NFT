@@ -21,6 +21,22 @@ display: flex;
     top: 0;
     right: 0;
     overflow-y: auto;
+     @media only screen and (min-width: 1280px) {
+ width: 480px;
+    height: 80px;
+    padding: 10px;
+    top: 55px;
+    right: 104px;
+    backdrop-filter: blur(12px);
+background: ${(props) => props.theme.color.primary_grey};
+border-radius: 12px;
+  } 
+    ul{
+      @media only screen and (min-width: 1280px) {
+    display: flex;
+    gap: 10px
+  } 
+    }
     
 .item-button{
   font-family: 'Messina Sans Mono', sans-serif; 
@@ -30,6 +46,16 @@ display: flex;
   line-height: 1.2;
   background-color: transparent;
   border: none;
+  @media only screen and (min-width: 1280px) {
+  font-size: 16px;
+  color: ${(props) => props.theme.color.primary_text_black};
+   line-height: 1.18;
+   width: 80px;
+    height: 80px;
+    display: flex;
+align-items: center;
+justify-content: center;
+  } 
     }
 .list-item{
    margin: 0 0 22px;

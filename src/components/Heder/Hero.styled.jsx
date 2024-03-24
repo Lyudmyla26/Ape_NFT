@@ -314,7 +314,9 @@ width: 190px;
 }
 .header-logo.white path{
   fill: ${(props) => props.theme.color.primary_white};
-  
+   @media only screen and (min-width: 1280px) {
+fill: ${(props) => props.theme.color.primary_black};
+  } 
 }
 
 .header-logo.white:hover path,
@@ -324,6 +326,10 @@ width: 190px;
 .menu.white path{
   fill: ${(props) => props.theme.color.primary_white};
   color: ${(props) => props.theme.color.primary_white};
+  @media only screen and (min-width: 1280px) {
+fill: ${(props) => props.theme.color.primary_black};
+  color: ${(props) => props.theme.color.primary_black};
+  } 
 }
 .menu.white {
   color: ${(props) => props.theme.color.primary_white};
@@ -335,6 +341,7 @@ width: 190px;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+
 }
 .menu.white:hover .discord-svg path,
 .menu.white:focus .discord-svg path{
