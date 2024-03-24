@@ -7,6 +7,10 @@ width: 592px;
     display: block;
     margin: auto;
 }
+@media only screen and (min-width: 1280px) {
+width: 1032px;
+   
+}
 .title{
 font-size: 44px;
 font-weight: 900;
@@ -18,6 +22,11 @@ margin-bottom: 10px;
 @media only screen and (min-width: 768px) {
   font-size: 60px;
   }
+  @media only screen and (min-width: 1280px) {
+  font-size: 140px;
+  margin-top: 50px;
+margin-bottom: 30px;
+  }
 }
 .list-map{
 display: flex;
@@ -27,7 +36,6 @@ list-style: none;
 overflow: hidden;
 justify-content: center;
 @media only screen and (min-width: 768px) {
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 }

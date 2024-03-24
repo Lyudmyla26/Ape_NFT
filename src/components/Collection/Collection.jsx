@@ -4,12 +4,20 @@ import { Section } from 'Section/Section';
 
 export const Collection = ({ art }) => {
     const [activeSlide, setActiveSlide] = useState(0);
-    const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
+    const [slidesToShow, setSlidesToShow] = useState(1);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsTablet(window.innerWidth >= 768);
+            const screenWidth = window.innerWidth;
+            if (screenWidth >= 1280) {
+                setSlidesToShow(4);
+            } else if (screenWidth >= 768) {
+                setSlidesToShow(2);
+            } else {
+                setSlidesToShow(1);
+            }
         };
+        handleResize();
 
         window.addEventListener('resize', handleResize);
 
@@ -29,10 +37,10 @@ export const Collection = ({ art }) => {
     ];
 
     const nextSlide = () => {
-        if (activeSlide === slides.length - (isTablet ? 2 : 1)) {
+        if (activeSlide === slides.length - slidesToShow) {
             return;
         } else {
-            setActiveSlide(prevIndex => prevIndex + (isTablet ? 2 : 1));
+            setActiveSlide(prevIndex => prevIndex + slidesToShow);
         }
     };
 
@@ -40,26 +48,26 @@ export const Collection = ({ art }) => {
         if (activeSlide === 0) {
             return;
         } else {
-            setActiveSlide(prevIndex => prevIndex - (isTablet ? 2 : 1));
+            setActiveSlide(prevIndex => prevIndex - slidesToShow);
         }
     };
 
     return (
         <Section>
-        <Collections id={art}>
-            <h2 className='title'>COLLECTION</h2>
-            <ul className='list-map'>
-                {slides.slice(activeSlide, activeSlide + (isTablet ? 2 : 1)).map((slide, index) => (
-                    <li key={slide.key} className={index === 0 || index === 1 ? 'active' : ''}>
-                        <img srcSet={`${slide.img1x} 1x, ${slide.img2x} 2x`} src={slide.img1x} alt={`Slide ${index}`} />
-                    </li>
-                ))}
-            </ul>
-            <ul className='map-button'>
-                <li><button type='button' className='button-map' onClick={prevSlide}>Prev</button></li>
-                <li><button type='button' className='button-map' onClick={nextSlide}>Next</button></li>
-            </ul>
-        </Collections>
+            <Collections id={art}>
+                <h2 className='title'>COLLECTION</h2>
+                <ul className='list-map'>
+                    {slides.slice(activeSlide, activeSlide + slidesToShow).map((slide, index) => (
+    <li key={slide.key} className={index < slidesToShow ? 'active' : ''}>
+        <img srcSet={`${slide.img1x} 1x, ${slide.img2x} 2x`} src={slide.img1x} alt={`Slide ${index}`} />
+    </li>
+))}
+                </ul>
+                <ul className='map-button'>
+                    <li><button type='button' className='button-map' onClick={prevSlide}>Prev</button></li>
+                    <li><button type='button' className='button-map' onClick={nextSlide}>Next</button></li>
+                </ul>
+            </Collections>
         </Section>
     );
 };
