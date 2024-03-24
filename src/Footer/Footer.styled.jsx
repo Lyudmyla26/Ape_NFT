@@ -18,4 +18,8 @@ margin-bottom: 25px;
  @media only screen and (min-width: 768px) {
     width: 592px;
   } 
+   @media only screen and (min-width: 1280px) {
+  font-size: 16px;
+line-height: 1.19;
+  } 
 }`

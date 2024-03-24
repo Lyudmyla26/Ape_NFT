@@ -5,7 +5,7 @@ export const Forms = styled.div`
 width: 216px;
 margin: 0 auto;
 @media only screen and (min-width: 768px) {
-width: 397px;
+width: 581px;
   } 
 .title{
 font-size: 44px;
@@ -17,6 +17,9 @@ text-align: center;
    font-size: 60px;
    line-height: 1;  
 
+  } 
+  @media only screen and (min-width: 1280px) {
+font-size: 120px;
   } 
 }
 
@@ -31,6 +34,10 @@ font-weight: 400;
 line-height: 1.18;   
 text-transform: uppercase;
 text-align: center;
+@media only screen and (min-width: 1280px) {
+font-size: 24px;
+line-height: 1.2; 
+  } 
 }
 .form-label{
 display: flex;
@@ -54,6 +61,10 @@ font-weight: 400;
 line-height: 1.17;   
 text-transform: uppercase;
 width: 100%; 
+ @media only screen and (min-width: 1280px) {
+  font-size: 16px;
+line-height: 1.19;   
+  }
 
 &.valid-input:not(:placeholder-shown) {
       border: 2px solid ${(props) => props.theme.color.primary_white}; 
@@ -74,6 +85,11 @@ width: 248px;
 display: block;
     margin: 15px auto;
   }
+    @media only screen and (min-width: 1280px) {
+width: 397px;
+
+  }
+  
 }
 .button-form{
 backdrop-filter: blur(12px);
@@ -91,6 +107,10 @@ margin: 15px 0 0;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ @media only screen and (min-width: 1280px) {
+font-size: 28px;
+line-height: 1.21;   
+  }
 }
 .button-form:hover,
 .button-form:focus {
