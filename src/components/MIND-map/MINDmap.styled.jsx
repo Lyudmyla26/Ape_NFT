@@ -6,6 +6,9 @@ export const Mindmep = styled.div`
 width: 592px;
 margin: 0 auto;
 }  
+@media only screen and (min-width: 1280px) {
+width: 1032px;
+} 
 
 .title{
 font-size: 44px;
@@ -17,6 +20,11 @@ margin-top: 30px;
 margin-bottom: 10px;
 @media only screen and (min-width: 768px) {
 font-size: 60px;
+  }
+  @media only screen and (min-width: 1280px) {
+font-size: 140px;
+margin-top: 50px ;
+margin-bottom: 50px ;
   }
 }
 .list-map{
@@ -42,8 +50,11 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 width: calc((100% - 30px) / 2);
-}
-    
+height: 284px;
+} 
+@media only screen and (min-width: 1280px) {
+height: 480px;
+}   
 }
 .list-map li.active {
 display: flex;
@@ -59,12 +70,25 @@ font-size: 12px;
 font-weight: 400;
 line-height: 1.16;   
 text-transform: uppercase;
+ @media only screen and (min-width: 765px) {
+width: 128px;
+margin-left: auto;
+}
+@media only screen and (min-width: 1280px) {
+font-size: 24px;
+line-height: 1.2;
+width: 256px;
+}
 }
 .list-map li>h3{
 font-size: 32px;
 font-weight: 900;
 line-height: 1;   
 text-transform: uppercase;
+@media only screen and (min-width: 1280px) {
+font-size: 64px;
+line-height: 1;
+}
 } 
 .icon-map{
 display: block;

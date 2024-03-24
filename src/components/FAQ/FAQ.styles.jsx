@@ -7,6 +7,9 @@ export const FAQs = styled.div`
 @media only screen and (min-width: 768px) {
  width: 592px; 
   } 
+  @media only screen and (min-width: 1280px) {
+ width: 1032px; 
+  } 
 .title{
 font-size: 44px;
 font-weight: 900;
@@ -17,6 +20,11 @@ margin-top: 30px;
 margin-bottom: 15px;
 @media only screen and (min-width: 768px) {
 font-size: 60px; 
+  } 
+    @media only screen and (min-width: 1280px) {
+ font-size: 160px;
+     margin-top: 50px;
+    margin-bottom: 30px;
   } 
 }
 
@@ -38,6 +46,9 @@ transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 @media only screen and (min-width: 768px) {
 font-size: 32px;
+  } 
+   @media only screen and (min-width: 1280px) {
+ font-size: 64px;
   } 
 }
 
@@ -63,6 +74,10 @@ line-height: 1.66;
 font-size: 16px; 
 line-height: 1.69;  
   }
+   @media only screen and (min-width: 1280px) {
+ font-size: 24px;
+ line-height: 1.66;
+  } 
 }
 .question-img{
 visibility: hidden;
@@ -77,6 +92,11 @@ height: 183px;
 transform: rotate(350deg);
 border-radius: 13px;
   } 
+  @media only screen and (min-width: 768px) {
+width: 248px;
+height: 282px; 
+border-radius: 22px;
+  }
     
 }
 .active{
@@ -104,5 +124,9 @@ line-height: 1.16;
 text-transform: uppercase;
 margin-left: 26px;
 
+ @media only screen and (min-width: 1280px) {
+ font-size: 16px;
+ line-height: 1.18;
+  } 
 }
 `

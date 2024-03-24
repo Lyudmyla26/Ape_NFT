@@ -5,6 +5,9 @@ import '../../font/MessinaSans/stylesheet.css';
 import mobile_2x from '../../images/hero-2x.png'
 import tablet from '../../images/tablet1x.png'
 import tablet2x from '../../images/tablet2x.png'
+import desctop1x from '../../images/herodesctop1x.png'
+import desctop2x from '../../images/herodesctop2x.png'
+
 export const Heros = styled.div`
   padding: 10px 10px 15px;
   max-width: 480px;
@@ -18,7 +21,7 @@ export const Heros = styled.div`
     margin: 50px auto;
   } 
   @media only screen and (min-width: 1280px) {
-  max-width: 1440px;
+  max-width: 1248px;
   padding: 0 10px;
   } 
 .df{
@@ -36,6 +39,10 @@ display: flex;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media only screen and (min-width: 1280px) {
+  width: 72px;
+  height: 50px;
+  } 
   }
   .header-logo:hover path,
   .header-logo:focus path{
@@ -57,7 +64,11 @@ display: flex;
   width: 48px;
   height: 48px;
   backdrop-filter: blur(12px);
-  background: ${(props) => props.theme.color.primary_grey};;
+  background: ${(props) => props.theme.color.primary_grey};
+    @media only screen and (min-width: 1280px) {
+ width: 80px;
+  height: 80px;
+  } 
 
   }
   .list>li:not(:last-child){
@@ -69,6 +80,7 @@ display: flex;
   background-repeat: no-repeat;
   width: 216px;
   height: 284px;
+
   @media only screen and (min-width: 768px) {
   background-image: url(${tablet});
   width: 283px;
@@ -76,7 +88,13 @@ display: flex;
   position: absolute;
   left: 45%;
   transform: translateX(-45%);
-  top: 46px;
+  top: 60px;
+  } 
+   @media only screen and (min-width: 1280px) {
+  background-image: url(${desctop1x});
+   width: 463px;
+  height: 612px;
+  top: 74px;
   } 
   }
   @media
@@ -89,6 +107,10 @@ display: flex;
     @media only screen and (min-width: 768px) {
     background-image: url(${tablet2x});
      background-size: 283px 386px;
+  } 
+   @media only screen and (min-width: 1280px) {
+  background-image: url(${desctop2x});
+  background-size: 463px 612px;
   } 
     }
 }
@@ -107,6 +129,10 @@ display: flex;
   margin-top: 150px;
   order: 1;
   } 
+    @media only screen and (min-width: 1280px) {
+ font-size: 24px;
+  line-height: 1.67;
+  } 
   }
   .title{
   font-size: 44px;
@@ -121,10 +147,17 @@ display: flex;
     letter-spacing: 0.01em;
     order: 2;
   } 
+   @media only screen and (min-width: 1280px) {
+ font-size: 140px;
+  line-height: 1.67;
+  } 
   }
   .title-span{
      @media only screen and (min-width: 768px) {
-  margin-left: 135px;
+  margin-left: 140px;
+  } 
+     @media only screen and (min-width: 1280px) {
+  margin-left: 180px;
   } 
   }
   .expression{
@@ -139,6 +172,10 @@ display: flex;
     line-height: 1.65;
     order: 3;
     margin-bottom: 0px;
+  } 
+    @media only screen and (min-width: 1280px) {
+  font-size: 24px;
+  line-height: 1.66;
   } 
   }
   .description{
@@ -155,6 +192,12 @@ display: flex;
  margin-left: auto;
  text-align: justify;
  order: 4;
+  width: 190px;
+  } 
+  @media only screen and (min-width: 1280px) {
+  width: 337px;
+  font-size: 16px;
+  line-height: 1.19;
   } 
  }
   .name{
@@ -177,6 +220,16 @@ display: flex;
   @media only screen and (min-width: 768px) {
  margin-left: auto;
  order: 5;
+width: 190px;
+  height: 41px;
+
+  } 
+   @media only screen and (min-width: 1280px) {
+ margin-bottom: 55px;
+ width: 337px;
+  height: 70px;
+  font-size: 28px;
+  line-height: 1.21;
   } 
   }
   .name:hover,
@@ -201,6 +254,11 @@ display: flex;
    transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  @media only screen and (min-width: 1280px) {
+ font-size: 16px;
+  line-height: 1.18;
+ 
+  } 
   }
   .menu:hover,
   .menu:focus{
@@ -211,6 +269,12 @@ display: flex;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  @media only screen and (min-width: 1280px) {
+ margin-bottom: 35px;
+ width: 24px;
+  height: 24px;
+ 
+  } 
   }
  .discord-svg:hover path,
  .discord-svg:focus path {

@@ -5,6 +5,8 @@ import '../../font/BiroScript/stylesheet.css';
 import '../../font/MessinaSans/stylesheet.css';
 import abouttablet from '../../images/abouttablet1x.png'
 import abouttablet2x from '../../images/abouttablet2x.png'
+import desctop1x from '../../images/desctop1x.png'
+import desctop2x from '../../images/desctop2x.png'
 
 export const Abouts = styled.div`
   margin-top: 50px;
@@ -18,7 +20,9 @@ flex-wrap: wrap;
 gap: 15px;
 width: 592px;
 position: relative;
-
+}
+@media only screen and (min-width: 1280px) {
+width: 1032px;
 }
 
   }
@@ -31,6 +35,9 @@ position: relative;
   @media only screen and (min-width: 768px) {
 width: calc((100% - 30px) / 2);
   font-size: 60px;
+}
+@media only screen and (min-width: 1280px) {
+  font-size: 100px;
 }
   }
   .title-abouts{
@@ -48,6 +55,9 @@ width: calc((100% - 30px) / 2);
 width: calc((100% - 30px) / 2);
 text-align: right;
 }
+@media only screen and (min-width: 1280px) {
+  font-size: 24px;
+}
   }
   .note2{
   font-family: 'Messina Sans Mono', sans-serif; 
@@ -61,6 +71,9 @@ text-align: right;
 width: calc((100% - 30px) / 2);
   font-size: 16px;
    line-height: 1.19;
+}
+@media only screen and (min-width: 1280px) {
+  font-size: 24px;
 }
   }
   .close{
@@ -81,6 +94,11 @@ width: calc((100% - 30px) / 2);
     right: 0;
     bottom: 0;
 }
+@media only screen and (min-width: 1280px) {
+  background-image: url(${desctop1x});
+   width: 492px;
+  height: 662px;
+}
   }
     @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -91,6 +109,10 @@ width: calc((100% - 30px) / 2);
        @media only screen and (min-width: 768px) {
     background-image: url(${abouttablet2x});
     background-size: 313px 422px;
+}
+  @media only screen and (min-width: 1280px) {
+    background-image: url(${desctop2x});
+    background-size: 492px 662px;
 
 }
     }
