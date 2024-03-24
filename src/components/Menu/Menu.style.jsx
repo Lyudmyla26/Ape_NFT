@@ -34,7 +34,7 @@ border-radius: 12px;
     ul{
       @media only screen and (min-width: 1280px) {
     display: flex;
-    gap: 10px
+    gap: 10px;
   } 
     }
     
@@ -51,13 +51,22 @@ border-radius: 12px;
   color: ${(props) => props.theme.color.primary_text_black};
    line-height: 1.18;
    width: 80px;
-    height: 80px;
+    height: 60px;
     display: flex;
 align-items: center;
 justify-content: center;
   } 
     }
+    .item-button:hover {
+      @media only screen and (min-width: 1280px) {
+  color: ${(props) => props.theme.color.primary_white};
+  content: '';
+  } 
+    }
 .list-item{
    margin: 0 0 22px;
+   @media only screen and (min-width: 1280px) {
+    margin: 0;
+   }
     }
     `
